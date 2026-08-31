@@ -1,9 +1,10 @@
 #!/usr/bin/bash
 
-CONFIG_FILE="./config.sh"
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+CONFIG_FILE="$SCRIPT_DIR/config.sh"
 
 if [[ -f "$CONFIG_FILE" ]]; then
-    # shellcheck source=/dev/null
     source "$CONFIG_FILE"
 else
     echo "Config file not found: $CONFIG_FILE" >&2
@@ -11,15 +12,11 @@ else
 fi
 
 
-SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-# WIKIEXE=/usr/local/bin/tiddlywiki
-
 WIKIDIR=$SCRIPT_DIR/content
-ACCESS_LOG=$SCRIPT_DIR/log/access.log
-ERROR_LOG=$SCRIPT_DIR/log/error.log
-WIKI_PID=$SCRIPT_DIR/log/wiki.pid
-
-# PORT=9852
+LOG_DIR=$SCRIPT_DIR/log
+ACCESS_LOG=$LOG_DIR/access.log
+ERROR_LOG=$LOG_DIR/error.log
+WIKI_PID=$LOG_DIR/wiki.pid
 
 cd $CRIPT_DIR
 
