@@ -7,7 +7,9 @@
         "tiddlywiki/katex",
         "tiddlywiki/markdown",
         "tiddlywiki/codemirror",
-        "tiddlywiki/menubar"
+        "tiddlywiki/menubar",
+        "tw5-relink/relink",
+        "tw5-relink/relink-markdown"
     ],
     "themes": [
         "tiddlywiki/vanilla",

@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
+export TIDDLYWIKI_PLUGIN_PATH=plugins
+
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 CONFIG_FILE="$SCRIPT_DIR/config.sh"
