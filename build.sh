@@ -22,5 +22,5 @@ WIKI_PID=$LOG_DIR/wiki.pid
 
 cd $SCRIPT_DIR
 
-$WIKIEXE $WIKIDIR --build index
+$WIKIEXE $WIKIDIR --output $SCRIPT_DIR/build/classic --build index
 

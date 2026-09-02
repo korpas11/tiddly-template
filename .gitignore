@@ -1,5 +1,5 @@
 *.log
 *.pid
 $__StoryList*
-content/output
+/build
 
